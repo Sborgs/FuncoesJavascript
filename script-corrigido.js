@@ -92,18 +92,6 @@ function eFeriado(data) {
   const feriadosMoveis = retornaFeriadosMoveis(data.getFullYear());
   const feriadosFixos = retornaFeriadosFixos();
 
-  // const feriados = [
-  //   "01/01", // Ano Novo
-  //   "01/05", // Dia do Trabalho
-  //   "25/07", // Dia Estadual da Consciencia Negra
-  //   "07/09", // Independência do Brasil
-  //   "12/10", // Dia de Nossa Senhora Aparecida
-  //   "15/10", // Dia da proclamação da república
-  //   "02/11", // Finados
-  //   "25/12", // Natal    
-  //   ...feriadosMoveis
-  // ];
-
   const feriados = [
     ...feriadosFixos,
     ...feriadosMoveis
@@ -188,8 +176,6 @@ function retornaFeriadosMoveis(ano) {
     `${ano}-${mesDaPascoa}-${diaDoMesDaPascoa}T00:00:00`
   );
   let dataFeriado;
-  let diaExtracao;
-  let mesExtracao;
 
   //pascoa
   dataFeriado = domingoPascoa;
